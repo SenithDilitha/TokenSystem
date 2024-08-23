@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35208.52
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TokenIssuanceService", "TokenIssuanceService", "{C41E3E32-DD37-418D-BCD2-64E0499E1003}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TokenIssuanceService.API", "TokenIssuanceService\TokenIssuanceService.API\TokenIssuanceService.API.csproj", "{0C854DB4-96D0-471C-9F69-FDE439FA4467}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TokenIssuanceService.Application", "TokenIssuanceService\TokenIssuanceService.Application\TokenIssuanceService.Application.csproj", "{1E4CBB44-2803-4FC5-A85B-8D390EA1FC60}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TokenIssuanceService.Domain", "TokenIssuanceService\TokenIssuanceService.Domain\TokenIssuanceService.Domain.csproj", "{F27E3FF9-56BE-4D2B-BC09-27A4254F7A8B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TokenIssuanceService.Infrastructure", "TokenIssuanceService.Infrastructure\TokenIssuanceService.Infrastructure.csproj", "{EC4D536C-8126-44FD-8CB9-56F0886AD16E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0C854DB4-96D0-471C-9F69-FDE439FA4467}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C854DB4-96D0-471C-9F69-FDE439FA4467}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C854DB4-96D0-471C-9F69-FDE439FA4467}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C854DB4-96D0-471C-9F69-FDE439FA4467}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E4CBB44-2803-4FC5-A85B-8D390EA1FC60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E4CBB44-2803-4FC5-A85B-8D390EA1FC60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E4CBB44-2803-4FC5-A85B-8D390EA1FC60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E4CBB44-2803-4FC5-A85B-8D390EA1FC60}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F27E3FF9-56BE-4D2B-BC09-27A4254F7A8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F27E3FF9-56BE-4D2B-BC09-27A4254F7A8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F27E3FF9-56BE-4D2B-BC09-27A4254F7A8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F27E3FF9-56BE-4D2B-BC09-27A4254F7A8B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC4D536C-8126-44FD-8CB9-56F0886AD16E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC4D536C-8126-44FD-8CB9-56F0886AD16E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC4D536C-8126-44FD-8CB9-56F0886AD16E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC4D536C-8126-44FD-8CB9-56F0886AD16E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0C854DB4-96D0-471C-9F69-FDE439FA4467} = {C41E3E32-DD37-418D-BCD2-64E0499E1003}
+		{1E4CBB44-2803-4FC5-A85B-8D390EA1FC60} = {C41E3E32-DD37-418D-BCD2-64E0499E1003}
+		{F27E3FF9-56BE-4D2B-BC09-27A4254F7A8B} = {C41E3E32-DD37-418D-BCD2-64E0499E1003}
+		{EC4D536C-8126-44FD-8CB9-56F0886AD16E} = {C41E3E32-DD37-418D-BCD2-64E0499E1003}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {43D8A570-5EA2-4F3D-BAC4-4246BA00C307}
+	EndGlobalSection
+EndGlobal
