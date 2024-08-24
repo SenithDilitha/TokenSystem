@@ -16,7 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\TokenIssuanceService\TokenIssuanceService.Domain\TokenIssuanceService.Domain.csproj" />
+    <ProjectReference Include="..\TokenIssuanceService.Domain\TokenIssuanceService.Domain.csproj" />
   </ItemGroup>
 
 </Project>

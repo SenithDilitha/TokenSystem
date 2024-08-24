@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\TokenIssuanceService.Infrastructure\TokenIssuanceService.Infrastructure.csproj" />
+    <ProjectReference Include="..\TokenIssuanceService.Infrastructure\TokenIssuanceService.Infrastructure.csproj" />
     <ProjectReference Include="..\TokenIssuanceService.Domain\TokenIssuanceService.Domain.csproj" />
   </ItemGroup>
 

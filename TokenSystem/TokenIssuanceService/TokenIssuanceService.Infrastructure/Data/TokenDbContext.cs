@@ -9,7 +9,7 @@ public class TokenDbContext : DbContext
     {
     }
 
-    public DbSet<Token> Tokens { get; set; }
+    public DbSet<Token?> Tokens { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
