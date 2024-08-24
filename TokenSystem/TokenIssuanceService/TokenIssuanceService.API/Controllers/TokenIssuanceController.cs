@@ -15,7 +15,7 @@ public class TokenIssuanceController : ControllerBase
         _tokenIssuanceService = tokenIssuanceService;
     }
 
-    [HttpGet]
+    [HttpGet("issue-token")]
     public async Task<IActionResult> IssueToken(string clientName, ServiceCategory serviceCategory)
     {
         var token = await _tokenIssuanceService.IssueToken(clientName, serviceCategory);
@@ -23,7 +23,7 @@ public class TokenIssuanceController : ControllerBase
         return Ok(token);
     }
 
-    [HttpGet]
+    [HttpGet("pending-tokens")]
     public async Task<IActionResult> GetPendingTokens()
     {
         var tokens = await _tokenIssuanceService.GetPendingTokens();
@@ -31,7 +31,7 @@ public class TokenIssuanceController : ControllerBase
         return Ok(tokens);
     }
 
-    [HttpPut]
+    [HttpPut("update")]
     public async Task<IActionResult> UpdateToken(int id, TokenStatus tokenStatus)
     {
         var isSuccess = await _tokenIssuanceService.UpdateTokenStatus(id, tokenStatus);
