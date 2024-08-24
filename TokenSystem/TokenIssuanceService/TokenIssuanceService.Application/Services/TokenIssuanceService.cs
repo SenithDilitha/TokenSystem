@@ -38,6 +38,7 @@ public class TokenIssuanceService : ITokenIssuanceService
     public async Task<bool> UpdateTokenStatus(int tokenId, TokenStatus status)
     {
         var token = await _tokenRepository.GetTokenById(tokenId);
+        if (token == null) return false;
         token.Status = status;
 
         await _tokenRepository.UpdateToken(token);

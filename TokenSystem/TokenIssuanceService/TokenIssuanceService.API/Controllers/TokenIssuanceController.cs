@@ -4,7 +4,7 @@ using TokenIssuanceService.Domain.Entities;
 
 namespace TokenIssuanceService.API.Controllers;
 
-[Route("api/[controller]")]
+[Route("api/tokens")]
 [ApiController]
 public class TokenIssuanceController : ControllerBase
 {
@@ -23,7 +23,7 @@ public class TokenIssuanceController : ControllerBase
         return Ok(token);
     }
 
-    [HttpGet("pending-tokens")]
+    [HttpGet("pending")]
     public async Task<IActionResult> GetPendingTokens()
     {
         var tokens = await _tokenIssuanceService.GetPendingTokens();
@@ -31,7 +31,7 @@ public class TokenIssuanceController : ControllerBase
         return Ok(tokens);
     }
 
-    [HttpPut("update")]
+    [HttpPut("update-token")]
     public async Task<IActionResult> UpdateToken(int id, TokenStatus tokenStatus)
     {
         var isSuccess = await _tokenIssuanceService.UpdateTokenStatus(id, tokenStatus);
