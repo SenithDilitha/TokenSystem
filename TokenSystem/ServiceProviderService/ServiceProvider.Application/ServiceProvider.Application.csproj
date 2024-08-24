@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\TokenIssuanceService\TokenIssuanceService.Domain\TokenIssuanceService.Domain.csproj" />
+    <ProjectReference Include="..\ServiceProvider.Infrastructure\ServiceProvider.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

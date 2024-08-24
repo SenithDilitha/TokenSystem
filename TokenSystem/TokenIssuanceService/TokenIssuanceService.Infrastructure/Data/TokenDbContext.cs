@@ -35,7 +35,11 @@ public class TokenDbContext : DbContext
         });
 
         modelBuilder.Entity<Token>().HasData(
-            new Token { Id = 1, ClientName = "John Doe", ServiceCategory = ServiceCategory.Retirees, Status = TokenStatus.Pending, IssueDateTime = DateTime.Now }
+            new Token
+            {
+                Id = 1, ClientName = "John Doe", ServiceCategory = ServiceCategory.Retirees,
+                Status = TokenStatus.Pending, IssueDateTime = DateTime.Now
+            }
         );
     }
 }

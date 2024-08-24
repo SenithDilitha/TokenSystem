@@ -28,7 +28,7 @@ public class TokenRepository : ITokenRepository
             .ToListAsync())!;
     }
 
-    public async Task UpdateToken(Token? token)
+    public async Task UpdateToken(Token token)
     {
         _context.Tokens.Update(token);
         await _context.SaveChangesAsync();
