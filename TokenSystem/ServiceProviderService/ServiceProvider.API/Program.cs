@@ -26,7 +26,7 @@ builder.Services.AddHttpClient<ITokenIssuanceClient, TokenIssuanceClient>(client
     client.BaseAddress = new Uri(tokenIssuanceUrl);
 });
 
-var connectionString = builder.Configuration.GetConnectionString("TokenDbConnectionString");
+var connectionString = builder.Configuration["TokenDbConnectionString"];
 builder.Services.AddDbContext<ServiceDbContext>(options =>
     options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
 
@@ -39,7 +39,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseHttpsRedirection();
+//app.UseHttpsRedirection();
 
 app.UseAuthorization();
 

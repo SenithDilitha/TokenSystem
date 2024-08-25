@@ -1,0 +1,26 @@
+services:
+
+  tokenissuanceservice:
+    image: tokenissuanceservice:latest
+    build:
+      dockerfile: TokenIssuanceService.Dockerfile
+    ports:
+      - "5000:8080"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - TokenDbConnectionString=server=host.docker.internal;database=TokenDB;User=root;Password=1qazxsw2
+
+  serviceprovider:          
+    image: serviceprovider:latest
+    build:
+      dockerfile: ServiceProvider.Dockerfile             
+    ports:
+      - "5002:8080"                 
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - TokenDbConnectionString=server=host.docker.internal;database=TokenDB;User=root;Password=1qazxsw2
+      - TokenIssuanceServiceUrl=http://tokenissuanceservice:8080/
+
+networks:
+  default:
+    driver: bridge 
