@@ -15,7 +15,7 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddTransient<ITokenIssuanceService, TokenIssuanceService.Application.Services.TokenIssuanceService>();
 builder.Services.AddTransient<ITokenRepository, TokenRepository>();
 
-var connectionString = builder.Configuration.GetConnectionString("TokenDbConnectionString");
+var connectionString = builder.Configuration["TokenDbConnectionString"];
 builder.Services.AddDbContext<TokenDbContext>(options =>
     options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
 
@@ -28,7 +28,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseHttpsRedirection();
+//app.UseHttpsRedirection();
 
 app.UseAuthorization();
 

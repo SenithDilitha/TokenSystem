@@ -22,8 +22,9 @@ public class TokenIssuanceClient : ITokenIssuanceClient
 
             response.EnsureSuccessStatusCode();
 
-            await using var responseStream = await response.Content.ReadAsStreamAsync();
-            var tokens = await JsonSerializer.DeserializeAsync<IEnumerable<Token>>(responseStream);
+            var jsonString = await response.Content.ReadAsStringAsync();
+
+            var tokens = JsonSerializer.Deserialize<IEnumerable<Token>>(jsonString);
 
             return tokens;
         }
