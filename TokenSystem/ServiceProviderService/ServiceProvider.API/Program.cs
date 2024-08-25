@@ -57,4 +57,22 @@ app.UseAuthorization();
 
 app.MapControllers();
 
+ApplyMigrations();
+
 app.Run();
+
+void ApplyMigrations()
+{
+    using var scope = app.Services.CreateScope();
+    var services = scope.ServiceProvider;
+    try
+    {
+        var context = services.GetRequiredService<ServiceDbContext>();
+        context.Database.Migrate();
+    }
+    catch (Exception ex)
+    {
+        var logger = services.GetRequiredService<ILogger<Program>>();
+        logger.LogError(ex, "An error occurred while applying the migrations.");
+    }
+}
